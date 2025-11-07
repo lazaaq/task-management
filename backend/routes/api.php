@@ -31,4 +31,4 @@ Route::group(['prefix' => 'auth'], function () {
     });
 });
 
-Route::apiResource('tasks', TaskController::class)->middleware('auth:api');
+Route::apiResource('tasks', TaskController::class)->middleware('jwt.auth');
