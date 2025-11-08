@@ -26,7 +26,7 @@ export default function Login() {
       <form onSubmit={submit}>
         <h1>SIGN IN</h1>
         
-        {err && <div style={{ color: "red" }}>{err}</div>}
+        {err && <div className="text-danger">{err}</div>}
 
         <div class="input-group">
             <label for="email">EMAIL</label>

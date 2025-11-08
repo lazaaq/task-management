@@ -33,7 +33,7 @@ export default function Register() {
       <form onSubmit={submit}>
         <h1>SIGN UP</h1>
         
-        {err && <div style={{ color: "red" }}>{err}</div>}
+        {err && <div className="text-danger">{err}</div>}
 
         <div class="input-group">
             <label for="name">NAME</label>

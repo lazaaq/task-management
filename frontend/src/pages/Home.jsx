@@ -86,67 +86,43 @@ export default function Home() {
     <div>
       <Navbar />
     
-      <div style={{ maxWidth: "800px", margin: "auto", padding: "20px", color: "black" }} id="homepage-container">
+      <div className="container text-dark py-3" id="homepage-container">
 
-        {error && <div style={{ color: "red" }}>{error}</div>}
+        {error && <div className="text-danger">{error}</div>}
 
         {/* Add Task Button */}
-        <div style={{ marginBottom: "20px" }}>
-          <h1 style={{fontSize: "40px"}}>Task Dashboard</h1>
+        <div className="mb-4">
+          <h1 className="fs-1">Task Dashboard</h1>
         </div>
 
         {/* 🔹 Filter dropdown */}
-        <div style={{ display: "flex", minWidth: "600px" }}>
-          <div style={{ marginBottom: "20px", textAlign: "left" }}>
-            <label style={{margin:0}}>Status Filter: </label>
-            <select value={filter} onChange={(e) => setFilter(e.target.value)} style={{
-              fontSize: "12px", padding: "5px", margin: 0
-            }}>
+        <div className="d-flex min-w-600">
+          <div className="mb-4 text-start">
+            <label className="mb-0 me-2">Status Filter: </label>
+            <select value={filter} onChange={(e) => setFilter(e.target.value)} className="p-1 m-0" style={{fontSize: "12px"}}>
               <option value="all">All</option>
               <option value="todo">Todo</option>
               <option value="progress">Progress</option>
               <option value="done">Done</option>
             </select>
           </div>
-          <div style={{marginLeft: "auto"}}>
+          <div className="ms-auto">
             <button onClick={() => setShowModal(true)} className="add-btn">+ Add Task</button>
           </div>
         </div>
 
         {/* 🔹 Modal for creating/editing task */}
         {showModal && (
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100vw",
-              height: "100vh",
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 1000,
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "20px",
-                borderRadius: "10px",
-                width: "500px",
-              }}
-            >
+          <div className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 z-3">
+            <div className="bg-white p-3 rounded-3" style={{ width: "500px" }}>
               <form
                 onSubmit={(e) => {
                   handleSubmit(e);
                   setShowModal(false);
                 }}
-                style={{
-                  textAlign: "left"
-                }}
+                className="text-start"
               >
-                <label style={{ marginBottom: 0 }}>Title</label>
+                <label className="mb-0">Title</label>
                 <input
                   type="text"
                   placeholder="Title"
@@ -154,14 +130,14 @@ export default function Home() {
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                   required
                 />
-                <label style={{ marginBottom: 0, marginTop: "5px" }}>Description</label>
+                <label className="mb-0 mt-2">Description</label>
                 <textarea
                   type="text"
                   placeholder="Description"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                 />
-                <label style={{ marginBottom: 0, marginTop: "5px" }}>Status</label>
+                <label className="mb-0 mt-2">Status</label>
                 <select
                   value={formData.status}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value })}
@@ -170,13 +146,13 @@ export default function Home() {
                   <option value="progress">In Progress</option>
                   <option value="done">Done</option>
                 </select>
-                <label style={{ marginBottom: 0, marginTop: "5px" }}>Deadline</label>
+                <label className="mb-0 mt-2">Deadline</label>
                 <input
                   type="date"
                   value={formData.deadline}
                   onChange={(e) => setFormData({ ...formData, deadline: e.target.value })}
                 />
-                <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
+                <div className="mt-2 d-flex gap-2">
                   <button type="submit">{editingTask ? "Update" : "Create"}</button>
                   <button type="button" onClick={() => {
                     setShowModal(false);
@@ -191,29 +167,25 @@ export default function Home() {
 
 
         {/* 🔹 Task list */}
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul className="list-unstyled p-0">
           {tasks.length === 0 && <p>No tasks found.</p>}
           {tasks.map((task) => (
             <li
               key={task.task_id}
-              style={{
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "10px",
-                marginBottom: "10px",
-                display: "flex"
-              }}
+              className="border rounded-3 p-2 mb-2 d-flex border-secondary"
             >
-              <div style={{ textAlign: 'left', marginRight: "10px", minWidth: "400px" }}>
+              <div className="text-start me-2" style={{ minWidth: "400px" }}>
                 <strong>{task.title}</strong>
                 <br />
-                <span style={{ backgroundColor: task.status === "done" ? "var(--accent-green)" : task.status === "progress" ? "var(--accent-yellow)" : "var(--accent-red)", color: "white", padding: "2px 5px", borderRadius: "5px", color: "black", fontSize: "14px", border: "1px solid grey" }}>{task.status}</span>
+                <span className={`badge ${task.status === "done" ? "bg-success" : task.status === "progress" ? "bg-warning" : "bg-danger"} border`}>
+                  {task.status}
+                </span>
                 <br />
                 {task.deadline && (
                   <small>Deadline: {new Date(task.deadline).toLocaleDateString()}</small>
                 )}
               </div>
-              <div style={{ display: "flex", gap: "5px", marginLeft: "auto" }}>
+              <div className="d-flex gap-2" style={{ marginLeft: "auto" }}>
                 <button 
                   onClick={() => {
                     handleEdit(task);
