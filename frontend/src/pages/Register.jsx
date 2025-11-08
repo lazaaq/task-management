@@ -15,12 +15,16 @@ export default function Register() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("/auth/login", { email, password });
+      if (password !== passwordConfirmation) {
+        setErr("Passwords do not match");
+        return;
+      }
+      const res = await api.post("/auth/register", { name, email, password });
       localStorage.setItem("token", res.data.access_token);
 
       window.location.href = "/";
     } catch (error) {
-      setErr(error.response?.data?.message || "Login failed");
+      setErr(error.response?.data?.message || "Register failed");
     }
   };
 

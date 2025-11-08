@@ -14,9 +14,6 @@
 
 body {
   background-color: var(--secondary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   padding: 20px;
 }
@@ -79,6 +76,42 @@ input {
 input:focus {
   box-shadow: 4px 4px 0px var(--primary);
 }
+
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  resize: vertical;
+  min-height: 100px;
+}
+
+textarea:focus {
+  box-shadow: 4px 4px 0px var(--primary);
+}
+
+select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  appearance: none; /* remove default arrow styling */
+  border-radius: 0;
+  cursor: pointer;
+}
+
+select:focus {
+  box-shadow: 4px 4px 0px var(--primary);
+}
+
 
 .password-toggle {
   position: absolute;

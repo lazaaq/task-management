@@ -1,0 +1,32 @@
+:root {
+  --primary: #000000;
+  --secondary: #FFFFFF;
+  --accent-red: #FF5E5B;
+  --accent-yellow: #F9DC5C;
+  --accent-green: #53A548;
+  --accent-magenta: #8B2635;
+  --shadow: 8px 8px 0px var(--primary);
+}
+
+button {
+  font-size: 12px!important;
+  margin: 0;
+}
+.add-btn {
+  font-size: 13px!important;
+}
+.edit-btn {
+  background-color: var(--accent-yellow);
+  color: black;
+  height: fit-content!important;
+  margin: 0!important;
+  padding: 0!important;
+  padding: 5px 7px!important;
+}
+.delete-btn {
+  background-color: var(--accent-magenta);
+  color:white;
+  height: fit-content!important;
+  margin: 0!important;
+  padding: 5px 7px!important;
+}
