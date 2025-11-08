@@ -14,6 +14,11 @@ class TaskController extends Controller
     {
         $tasks = Task::query();
 
+        // filter by authenticated user (jwt token)
+        if ($request->user()) {
+            $tasks->where('user_id', $request->user()->id);
+        }
+
         // filter by status
         if ($request->has('status') && in_array($request->status, ['todo', 'progress', 'done'])) {
             $tasks->where('status', $request->status);
@@ -60,13 +65,14 @@ class TaskController extends Controller
     {
         try {
             $validated = $request->validate([
-                'user_id' => 'required|exists:users,id',
                 'title' => 'required|string|max:255',
                 'description' => 'nullable|string',
                 'status' => 'in:todo,progress,done',
                 'deadline' => 'nullable|date',
-                'created_by' => 'required|exists:users,id',
             ]);
+
+            $validated['user_id'] = $request->user()->id;
+            $validated['created_by'] = $request->user()->id;
 
             $task = Task::create($validated);
 
