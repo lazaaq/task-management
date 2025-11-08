@@ -29,52 +29,54 @@ export default function Register() {
   };
 
   return (
-    <div class="login-container">
-      <form onSubmit={submit}>
-        <h1>SIGN UP</h1>
-        
-        {err && <div className="text-danger">{err}</div>}
+    <div className="d-flex align-items-center justify-content-center" style={{height: "85vh"}}>
+      <div class="login-container">
+        <form onSubmit={submit}>
+          <h1>SIGN UP</h1>
+          
+          {err && <div className="text-danger">{err}</div>}
 
-        <div class="input-group">
-            <label for="name">NAME</label>
-            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="name" id="name" />
-        </div>
-        
-        <div class="input-group">
-            <label for="email">EMAIL</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" id="email" />
-        </div>
-        
-        <div class="input-group">
-            <label for="password">PASSWORD</label>
-            <input value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} placeholder={showPassword ? "password" : "*********"} id="password" />
-            <button
-              type="button"
-              class="password-toggle"
-              onClick={() => setShowPassword(prev => !prev)}
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
-        </div>
+          <div class="input-group">
+              <label for="name">NAME</label>
+              <input value={name} onChange={(e) => setName(e.target.value)} placeholder="name" id="name" />
+          </div>
+          
+          <div class="input-group">
+              <label for="email">EMAIL</label>
+              <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" id="email" />
+          </div>
+          
+          <div class="input-group">
+              <label for="password">PASSWORD</label>
+              <input value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} placeholder={showPassword ? "password" : "*********"} id="password" />
+              <button
+                type="button"
+                class="password-toggle mt-2"
+                onClick={() => setShowPassword(prev => !prev)}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+          </div>
 
-        <div class="input-group">
-            <label for="password_confirmation">PASSWORD CONFIRMATION</label>
-            <input value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} type={showPasswordConfirmation ? "text" : "password"} placeholder={showPasswordConfirmation ? "password" : "*********"} id="password_confirmation" />
-            <button
-              type="button"
-              class="password-toggle"
-              onClick={() => setShowPasswordConfirmation(prev => !prev)}
-            >
-              {showPasswordConfirmation ? <FaEyeSlash /> : <FaEye />}
-            </button>
-        </div>
-        
-        <button type="submit">SIGN UP</button>
-        
-        <div class="footer">
-            Already have an account? <a href="/login">Sign In</a>
-        </div>
-      </form>
+          <div class="input-group">
+              <label for="password_confirmation">PASSWORD CONFIRMATION</label>
+              <input value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} type={showPasswordConfirmation ? "text" : "password"} placeholder={showPasswordConfirmation ? "password" : "*********"} id="password_confirmation" />
+              <button
+                type="button"
+                class="password-toggle mt-2"
+                onClick={() => setShowPasswordConfirmation(prev => !prev)}
+              >
+                {showPasswordConfirmation ? <FaEyeSlash /> : <FaEye />}
+              </button>
+          </div>
+          
+          <button type="submit">SIGN UP</button>
+          
+          <div class="footer">
+              Already have an account? <a href="/login">Sign In</a>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

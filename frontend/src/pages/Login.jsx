@@ -22,36 +22,38 @@ export default function Login() {
   };
 
   return (
-    <div class="login-container">
-      <form onSubmit={submit}>
-        <h1>SIGN IN</h1>
-        
-        {err && <div className="text-danger">{err}</div>}
+    <div className="d-flex align-items-center justify-content-center" style={{height: "85vh"}}>
+      <div class="login-container">
+        <form onSubmit={submit}>
+          <h1>SIGN IN</h1>
+          
+          {err && <div className="text-danger">{err}</div>}
 
-        <div class="input-group">
-            <label for="email">EMAIL</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" id="email" />
-        </div>
-        
-        <div class="input-group">
-            <label for="password">PASSWORD</label>
-            <input value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} placeholder={showPassword ? "password" : "*********"} id="password" />
-            <button
-              type="button"
-              class="password-toggle"
-              onClick={() => setShowPassword(prev => !prev)}
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
+          <div class="input-group">
+              <label for="email">EMAIL</label>
+              <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" id="email" />
+          </div>
+          
+          <div class="input-group">
+              <label for="password">PASSWORD</label>
+              <input value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} placeholder={showPassword ? "password" : "*********"} id="password" />
+              <button
+                type="button"
+                class="password-toggle mt-2"
+                onClick={() => setShowPassword(prev => !prev)}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
 
-        </div>
-        
-        <button type="submit">SIGN IN</button>
-        
-        <div class="footer">
-            Don't have an account? <a href="/register">Sign Up</a>
-        </div>
-      </form>
+          </div>
+          
+          <button type="submit">SIGN IN</button>
+          
+          <div class="footer">
+              Don't have an account? <a href="/register">Sign Up</a>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
