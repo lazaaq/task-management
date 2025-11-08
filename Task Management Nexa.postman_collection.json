@@ -1,0 +1,1414 @@
+{
+	"info": {
+		"_postman_id": "b3f09d30-c335-4d78-87f5-833e4c99e017",
+		"name": "Task Management Nexa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23492811",
+		"_collection_link": "https://gold-star-758934.postman.co/workspace/Local-Workspace~a9e74419-125c-4176-8786-83e4005164ae/collection/23492811-b3f09d30-c335-4d78-87f5-833e4c99e017?action=share&source=collection_link&creator=23492811"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lana\",\n    \"email\": \"lanasaiful412@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Lana",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "lanasaiful411@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lana\",\n    \"email\": \"lanasaiful412@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "lanasaiful411@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Nov 2025 23:16:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE3NjI0NzEwMDQsImV4cCI6MTc2MjQ3NDYwNCwibmJmIjoxNzYyNDcxMDA0LCJqdGkiOiJiY3ZJaU13ZTJqSVBlT25pIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.LAMiUuBfpTo0AZHOW9iHNl_Wh1Si17mKZPGLmgpbFbk\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse response",
+							"let res = pm.response.json();",
+							"",
+							"if (res.access_token) {",
+							"    // Save token to the current collection",
+							"    pm.collectionVariables.set(\"api_token\", res.access_token);",
+							"    console.log(\"✅ Token saved to collection variable\");",
+							"} else {",
+							"    console.log(\"⚠️ No token found in response\");",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"lana@mail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lanasaiful411@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "lanasaiful411@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Nov 2025 23:10:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NjI0NzA2NDksImV4cCI6MTc2MjQ3NDI0OSwibmJmIjoxNzYyNDcwNjQ5LCJqdGkiOiJWMWhjRFNlQzR0RTdWQjlrIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Ze0vtiBQgntnTQyyRY8ynLOyjb5HRi4TSbEkRNCO_sA\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"lanasaiful411@gmail.com\",\n    \"password\": \"GelasMinum123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Lana",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "lanasaiful411@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lanasaiful411@gmail.com\",\n    \"password\": \"GelasMinum123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "lanasaiful411@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Nov 2025 23:16:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Lana",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "lanasaiful411@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "eyJpdiI6IkJ4c1ZFa2QxTnlPUVhHWE5xZWZIQ1E9PSIsInZhbHVlIjoiQ2xVa2puODN3MEhMTzViU2F1R0FmdmUyVWc4SXRueUlCUFltSVZ4bUxSbUE2V2lobzBZSjRNeUlBUHM2UldxYWdQSnViV3ppWUloSUVyV0ovbGNXQWxsTlNPRk1CbFlSK2w4UEZ4MzE2ZGRsSEdoMmpGaVZ6RG9wZVp2QjNham4iLCJtYWMiOiJmZWQzZDBiYjNhOTJkMWRiY2RlOTUyOWMyYTA0N2JkMTlkOWM2OGI1MDIyNjBhMjA5OGJiNjgwNmU5M2QzZDYyIiwidGFnIjoiIn0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lanasaiful411@gmail.com\",\n    \"password\": \"GelasMinum123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lana",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "lanasaiful411@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Nov 2025 23:16:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:02:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tasks retrieved successfully\",\n    \"tasks\": [\n        {\n            \"task_id\": 1,\n            \"user_id\": 3,\n            \"title\": \"Title 1\",\n            \"description\": \"Description 1\",\n            \"status\": \"todo\",\n            \"deadline\": \"2025-11-15\",\n            \"created_by\": 3,\n            \"created_at\": \"2025-11-07T09:02:08.000000Z\",\n            \"updated_at\": \"2025-11-07T09:02:08.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Tasks with Filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "done",
+							"disabled": true
+						},
+						{
+							"key": "deadline",
+							"value": "asc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "done",
+									"disabled": true
+								},
+								{
+									"key": "deadline",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:14:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tasks retrieved successfully\",\n    \"tasks\": [\n        {\n            \"task_id\": 3,\n            \"user_id\": 3,\n            \"title\": \"Title 1\",\n            \"description\": \"Description 1\",\n            \"status\": \"todo\",\n            \"deadline\": \"2025-11-15\",\n            \"created_by\": 3,\n            \"created_at\": \"2025-11-07T09:10:04.000000Z\",\n            \"updated_at\": \"2025-11-07T09:10:04.000000Z\"\n        },\n        {\n            \"task_id\": 2,\n            \"user_id\": 3,\n            \"title\": \"Title 1 Updated\",\n            \"description\": \"Description 1 Updated\",\n            \"status\": \"progress\",\n            \"deadline\": \"2026-11-15\",\n            \"created_by\": 3,\n            \"created_at\": \"2025-11-07T09:06:26.000000Z\",\n            \"updated_at\": \"2025-11-07T09:06:45.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								":task_id"
+							],
+							"variable": [
+								{
+									"key": "task_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:04:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task retrieved successfully\",\n    \"task\": {\n        \"task_id\": 1,\n        \"user_id\": 3,\n        \"title\": \"Title 1\",\n        \"description\": \"Description 1\",\n        \"status\": \"todo\",\n        \"deadline\": \"2025-11-15\",\n        \"created_by\": 3,\n        \"created_at\": \"2025-11-07T09:02:08.000000Z\",\n        \"updated_at\": \"2025-11-07T09:02:08.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Store Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 3,\n    \"title\": \"Title 1\",\n    \"description\": \"Description 1\",\n    \"deadline\": \"2025-11-15\",\n    \"created_by\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 3,\n    \"title\": \"Title 1\",\n    \"description\": \"Description 1\",\n    \"deadline\": \"2025-11-15\",\n    \"created_by\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:02:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task created successfully\",\n    \"task\": {\n        \"user_id\": 3,\n        \"title\": \"Title 1\",\n        \"description\": \"Description 1\",\n        \"deadline\": \"2025-11-15\",\n        \"created_by\": 3,\n        \"updated_at\": \"2025-11-07T09:02:08.000000Z\",\n        \"created_at\": \"2025-11-07T09:02:08.000000Z\",\n        \"id\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Title 1 Updated\",\n    \"description\": \"Description 1 Updated\",\n    \"deadline\": \"2026-11-15\",\n    \"status\": \"progress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Title 1 Updated\",\n    \"description\": \"Description 1 Updated\",\n    \"deadline\": \"2026-11-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								":task_id"
+							],
+							"variable": [
+								{
+									"key": "task_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:04:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task updated successfully\",\n    \"task\": {\n        \"task_id\": 1,\n        \"user_id\": 3,\n        \"title\": \"Title 1 Updated\",\n        \"description\": \"Description 1 Updated\",\n        \"status\": \"todo\",\n        \"deadline\": \"2026-11-15\",\n        \"created_by\": 3,\n        \"created_at\": \"2025-11-07T09:02:08.000000Z\",\n        \"updated_at\": \"2025-11-07T09:04:58.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/:task_id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								":task_id"
+							],
+							"variable": [
+								{
+									"key": "task_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.32"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 07 Nov 2025 09:05:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_token",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
