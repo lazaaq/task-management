@@ -47,7 +47,6 @@ export default function Home() {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
-        console.log('testing', formData);
         await api.post("/tasks", formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -100,7 +99,7 @@ export default function Home() {
 
         <div className="d-flex align-items-center min-w-600 mb-2">
           <div>
-            List of Tasks
+            List of Tasks :
           </div>
           <div className="ms-auto">
             <button onClick={() => setShowModal(true)} className="add-btn">+ Add Task</button>
